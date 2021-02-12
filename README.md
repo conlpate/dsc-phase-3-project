@@ -121,9 +121,9 @@ Due to the distribution of scores for LogReg, our RFC (random forest classifier)
 
 1. Assign Test/Train Data to Model
 2. Check Test/Train Performance
-3. ROC/AUC scores
-4. Confusion matrix
-5. Investigate scores (Accuracy, Precision, F1, Recall)
+3. Confusion Matrix
+4. ROC/AUC scores 
+5. Investigate scores 
 
 **For our DTC and RFC models, we'll use a gridsearch to tune our results.**
 
