@@ -1,5 +1,5 @@
 
-# The Problem with Mental Health in U.S. Policing
+# Is There a Problem with Mental Health in US Police Response? 
 
 ![Wapo 2020](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/wapo%20header.png)
 
@@ -29,7 +29,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 
 - Using *The Washington Post's* police shooting database, analyze the associated variables with police shootings involving a person suffering from a mental illness.
   - Per *The Washington Post's* breakdown of their dataset, their variable, "signs of mental illness," covers, **"News reports [that] have indicated the victim had a history of mental health issues, expressed suicidal intentions or was experiencing mental distress at the time of the shooting"**
-- Build a comprehensive classification model.
+- Build a comprehensive classification model predicting whether or not a person is suffering from mental distress when shot by police.
 - Present findings and solutions.
 
 ## Steps
@@ -51,7 +51,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 2. Which continuous variables (primarily location and age data) provide the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
    2. How do our continuous variables shine light on our categorical data?
-2. How can we best visualize the categorical and continuous data to illustrate our findings?
+3. How can we best visualize the categorical and continuous data to illustrate our findings?
 
 #### Areas of Focus and Analysis
 ### **Gender**
@@ -59,7 +59,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 ![Gender/ MI/age](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/signs%20gender%20mi.png)
 
 
-Comparing the two genders (*this dataset does not identify those who identify as non-binary or transgender*), 1/3 of women fatally shot by police were reported having/displaying signs of mental illness (MI signs)
+Comparing the two genders (*this dataset does not account for those who identify as non-binary or transgender*), 1/3 of women fatally shot by police were reported having/displaying signs of mental illness (MI signs)
 
 ![gender/MI/comparison ](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Titled%20Age%20Dist.png)
 
