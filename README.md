@@ -25,14 +25,25 @@ Daniel Prude, a 41 year old man in Rochester, NY, was hooded and restrained on t
 
 While Daniel Prude's name is not in *The Washington Post's* database, as he was not shot, his death is a tragic illustration of fatal force used against those suffering from a mental illness.
 
-## Objectives
+# Table of contents
 
-- Using *The Washington Post's* police shooting database, analyze the associated variables with police shootings involving a person suffering from a mental illness.
+- [Objectives and Steps](#objectives)
+- [EDA](#eda)
+    - [Gender](#gender)
+    - [Race](#race)
+    - [Location](#location)
+- [Model Analysis](#modeling)	
+    - [Location](#location)
+- [Recommendations]
+
+# Objectives
+
+- Using *The Washington Post's* police shooting database, analyze police shootings involving a person suffering from a mental illness.
   - Per *The Washington Post's* breakdown of their dataset, their variable, "signs of mental illness," covers, **"News reports [that] have indicated the victim had a history of mental health issues, expressed suicidal intentions or was experiencing mental distress at the time of the shooting"**
 - Build a comprehensive classification model predicting whether or not a person is suffering from mental distress when shot by police.
 - Present findings and solutions.
 
-## Steps
+### Steps
 
 1. Import necessary datasets (*Washington Post* and U.S. regions)
 2. Clean and scrub the dataframes
@@ -53,8 +64,8 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
    2. How do our continuous variables shine light on our categorical data?
 3. How can we best visualize the categorical and continuous data to illustrate our findings?
 
-#### Areas of Focus and Analysis
-### **Gender**
+# EDA 
+## **Gender**
 
 ![Gender/ MI/age](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/signs%20gender%20mi.png)
 
@@ -65,7 +76,7 @@ Comparing the two genders (*this dataset does not account for those who identify
 
 Unlike men, who seem to peak (RE: MI signs) earlier, **earlier (20s-40s)**, there is a **consistent distribution of MI signs across age brackets for women.**
 
-### **Race**
+## **Race**
 
 ![race/MI](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/signs%20of%20mental%20illness%20race%20pd.png)
 
@@ -81,7 +92,7 @@ Unlike men, who seem to peak (RE: MI signs) earlier, **earlier (20s-40s)**, ther
 
 ![race age gender](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Mental%20Illness%20Dist%20Titled.png)
 
-### **Location**
+## **Location**
 
 ![Signs of mental illness by Division](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/signs%20of%20mi%20division%20pd.png)
 
@@ -105,7 +116,7 @@ The Mid Atlantic Division, perhaps due to its share of cases, has a steady line 
 
 **We need to be aware of gender distribution among regions and divisions.**
 
-### Modeling
+# Modeling
 
 ![Model Overview](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/model%20overview%20title.png)
 
