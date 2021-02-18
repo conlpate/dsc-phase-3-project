@@ -150,7 +150,7 @@ In the attached notebook, you'll see various random forest classifiers fit with 
 
 ![SMOTECM](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/CM:AUC.png)
 
-
+![roc/auc](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/ROC%20Curve%20Mean%20AUC.png)
 
 
 
