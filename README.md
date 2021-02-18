@@ -8,20 +8,20 @@
 
 ## Introduction
 
-"*Defund the Police*" is not a new rallying cry. From [The Guardian, June 2020](https://www.nytimes.com/2020/06/05/your-money/houses-prices-coronavirus.html), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for **five years or more.** Perhaps stemming from the shooting of Michael Brown in Ferguson. [Timeline of Events in Ferguson, AP News, 2019](https://apnews.com/article/9aa32033692547699a3b61da8fd1fc62).
+"*Defund the Police*" is not a new rallying cry. Per [The Guardian, June 2020](https://www.theguardian.com/us-news/2020/jun/05/defunding-the-police-us-what-does-it-mean), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for **five years or more,** perhaps taking root after the shoooting of Michael Brown in 2019.
 
-However, since the murder of George Floyd, the call to "Defund the Police" has increased in both frequency and volume. As quoted above, rarely does the movement advocate for a dismantling of police departments; rather, a reallocation of funds toward necessary services.
+However, since the murder of George Floyd in the summer of 2020, calls to defund the police have increased in both frequency and volume. As quoted above, rarely does the movement advocate for a dismantling of police departments; rather, it a movement demanding a restructuring, a reallocation of law enforcement funds toward more beneficial services.
 
-Shortly after the aforementioned shooting of Michael Brown and the emergence of "Defund the Police" to the mainstream, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
+While calls to defund the police gained steam, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
 
-Perhaps one of the sharpest illustrations of a need to broaden, re-prioritize, defund, whatever one wants to call it, came with the death of Daniel Prude.
+Perhaps one of the sharpest illustrations of a need to reallocate funding toward more appropriate services came with the death of Daniel Prude.
 
 ![daniel prude](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/daniel%20prude%20treated%20like.png)
 
 
 [On Daniel Prude, NYTimes, Oct 2020](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)
 
-Daniel Prude, a 41 year old man in Rochester, NY, was hooded and restrained on the ground while suffering a mental episode. After an investigation into his death, the officers on the scene were cleared of any misconduct.
+Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illness, was restrained and hooded on the ground while suffering a mental health episode. Daniel Prude died of asphyxia while restrained on the ground. 
 
 While Daniel Prude's name is not in *The Washington Post's* database, as he was not shot, his death is a tragic illustration of fatal force used against those suffering from a mental illness.
 
@@ -35,7 +35,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 - [Model Analysis, RFC](#modeling)	
     - [Vanilla](#vanilla)
     - [Final](#final)
-- [Recommendations]
+- [Recommendations](#recommendations)
 
 # Objectives
 
@@ -152,49 +152,24 @@ In the attached notebook, you'll see various random forest classifiers fit with 
 
 ![roc/auc](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/ROC%20Curve%20Mean%20AUC.png)
 
+**Our SMOTE RFC model's recall score is twenty points higher than the next best model. Furthermore, our SMOTE RFC model's mean AUC score is tied with the other best performing models.** 
+
+### Continuing Data Analysis and Model Improvement
+
+1. Expand timeframe, region information.
+    - While adding in regions and divisions has eased project visualization, the added data doesn't address the lack of comprehensive mental health/mental illness data across disparate regions. We need more data on casualties suffering from mental illness. 
+    - Expanding the collection timeframe may show trends/spikes that a 5 year period cannot. 
+2. Combine local/state/federal databases indicating a mental illness presence, regardless of fatalities. 
+    - Are there commonalities across other types of police response aside from fatal shootings? Would we see the same indicators in arrests or non-lethal police responses? 
 
 
-## Analysis and Future Steps
+# Recommendations
 
-#### Analysis
-1. Logistic Regression
-    - Accuracy: 75%
-    - F1 Score (macro average): 54%
-    - **Highly imbalanced**, not a good fit for this data. 
-2. Decision Tree Classifier with FS, Gridsearch, and SMOTE
-    - Accuracy: 69%
-    - F1 Score (macro average): 57%
-3. Random Forest Classifier with Gridsearch, SMOTE, no FS
-    - Accuracy: 67%
-    - F1 Score (macro average): 60%
-    
-
-    
-#### Future Steps 
-1. Expand data. 
-    - While adding in regions and divisions has eased project visualization, the added data doesn't address our imbalance issues. We need more data on casualties suffering from mental illness. 
-    - Expand the time range? 
-    - Build a new dataset taking information from local and state datasets? 
-2. Balance and Fit
-    - Oversampling our target class has improved our metrics, but could more be done by undersampling our features?
-    - Across the board, our F1 scores could be improved. Is this possible with our current data? 
-    - Our best performing model, RFC with SMOTE (no FS) is currently overfitting. More work needs to be done to minimize fit issues. 
-3. Model Efficiency 
-    - At this moment, our models take quite a bit of time to run. Using a proportioned selection of the data will improve processing time and, depending on the method, may assist with our sampling issue. 
-    - This is especially true running a gridsearch for the DTC and RFC models. 
-4. ROC/AUC
-    - Need to further explore ROC/AUC scores for DTC and RFC. Need to further visualize the mean AUC scores of our high performing RFC models. 
-    
-#### Notes on the Models
-- While sampling has fixed much of our initial issues, our models are still imbalanced. We need to consider whether the provided data can accurately and comprehensively answer our initial question. 
-- A threshold across models should be put in place for future modeling. Set metrics for underperforming, average, and exceptional models to ease future tuning issues and questions. 
-
-
-
-## Business Deliverables
 ![Defund](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/defund.png)
 
-1. Reallocation of funds for crisis response should be funneled toward those most in need. Young men, women of all ages, Asian Americans, Black women. 
-2. Different regions require different support strategies. Larger urban areas could benefit from a more nuanced crisis approach. 
-3. More data is needed on: rural areas, gender identification (non-binary, transgender), funding for crisis calls, non-fatal injuries. 
+1. **Young men, women of all ages, Asian Americans, and Black women all indicate a higher mental illness presence in fatal encounters with the police.** These demographics need to be cross checked against other mental illness variables present in police shootings: **wielding toy weapons and a stationary response (not fleeing).**  	 	
+2. **Different regions may require different support strategies.** The aforementioned demographics need to be tested explicitly across both rural and urban environments. 
+3. **More data is needed on:** rural areas, gender identification (non-binary, transgender), regional funding for crisis calls, fatal injuries not involving firearms (e.g., Daniel Prude). 
+
+If the above items are found consistent across rural and urban areas, response teams should be aware of the variables most closely aligned with mental illness or a mental health episode. This could be accomplished through enhanced training or a reallocation of resources toward crisis response teams. Furthermore, as a preventative step, outreach should be focused on the aforementioned demographics, those most likely to have signs of mental health issues. 
     
