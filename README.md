@@ -42,9 +42,10 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 - Provide law enforcement agencies, their representatives and  other relevant bodies the necessary data to understand and contextualize the relationship between fatal shootings and mental illness.  
 - Using *The Washington Post's* police shooting database, analyze fatal police shootings involving a person suffering from a mental illness and their associated variables.
   - Per *The Washington Post's* breakdown of their dataset, their variable, "signs of mental illness," covers, **"News reports [that] have indicated the victim had a history of mental health issues, expressed suicidal intentions or was experiencing mental distress at the time of the shooting"**
+  - Build a binary classification model to predict mental illness presence among police shooting fatalities. 
 
 
-### Steps
+### Modeling and Notebook Approach
 
 1. Import necessary datasets (*Washington Post* and U.S. Regions)
 2. Clean and scrub
@@ -57,11 +58,10 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 ### Questions, Analysis, and Visualizations
 
 1. What categorical data provides the best insight into true/false signs of mental illness?
-   1. How do these interact with each other?
-   	A. What can we learn from these interactions?
+   1. How do these interact with each other? What can we learn from these interactions? 
 2. Which continuous variables (primarily location and age data) provide the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
-   2. How do our continuous variables shine light on our categorical data?
+   2. How do our continuous variables align with our categorical data?
 3. How can we best visualize the categorical and continuous data to illustrate our findings and provide recommendations?
 
 # EDA 
@@ -123,12 +123,12 @@ The Mid Atlantic Division, perhaps due to its share of cases, has a steady line 
 
 ![ConfusionMatrixVan](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/vanilla%20model.png)
 
-### After looking at our initial RFC to predict mental illness in police shooting fatalities, one thing becomes apparent: 
-	- Our vanilla model, highly imbalanced, cannot predict true cases of mental illness. 
+### After looking at our vanilla random forest classifier's confusion matrix, one thing becomes apparent: 
+	- Our initial model, highly imbalanced, cannot predict true cases of mental illness. 
 
 #### Where to Go?
 
-As we want to minimize type II errors (inaccurate reports of mental illness presence), the model needs to primarily focus on false negatives. With that in mind, we'll iterate through multiple models, all while focusing on increasing recall. 
+As we want to minimize type II errors (inaccurate classification of mental illness), the classifier needs to primarily focus on false negatives. With that in mind, we'll iterate through multiple models, all while focusing on increasing recall. 
 
 #### Methods of Model Analysis
 
