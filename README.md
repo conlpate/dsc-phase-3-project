@@ -38,21 +38,20 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 
 # Objectives
 
-- Using *The Washington Post's* police shooting database, analyze police shootings involving a person suffering from a mental illness.
+- Provide law enforcement agencies, their representatives and  other relevant bodies the necessary data to understand and contextualize the relationship between fatal shootings and mental illness.  
+- Using *The Washington Post's* police shooting database, analyze fatal police shootings involving a person suffering from a mental illness and their associated variables.
   - Per *The Washington Post's* breakdown of their dataset, their variable, "signs of mental illness," covers, **"News reports [that] have indicated the victim had a history of mental health issues, expressed suicidal intentions or was experiencing mental distress at the time of the shooting"**
-- Build a comprehensive classification model predicting whether or not a person is suffering from mental distress when shot by police.
-- Present findings and solutions.
+
 
 ### Steps
 
 1. Import necessary datasets (*Washington Post* and U.S. regions)
-2. Clean and scrub the dataframes
-3. Explore the datasets
+2. Clean and scrub
+3. Explore the data
 4. Visualize and analyze relevant mental illness variables
 5. Build and compare models
 6. Tune Best Performing Models
 
-*For clarity and comprehension, this readme will focus primarily on exploration, visualization, and modeling.* The attached notebook follows a CRISP-DM approach.
 
 ### Questions, Analysis, and Visualizations
 
@@ -62,7 +61,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 2. Which continuous variables (primarily location and age data) provide the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
    2. How do our continuous variables shine light on our categorical data?
-3. How can we best visualize the categorical and continuous data to illustrate our findings?
+3. How can we best visualize the categorical and continuous data to illustrate our findings and provide recommendations/ 
 
 # EDA 
 ## **Gender**
