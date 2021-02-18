@@ -52,6 +52,8 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 5. Build and compare models
 6. Present model and recommendations
 
+[Washington Post Github Database](https://github.com/washingtonpost/data-police-shootings)
+
 
 ### Questions, Analysis, and Visualizations
 
