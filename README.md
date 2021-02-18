@@ -46,12 +46,12 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 
 ### Steps
 
-1. Import necessary datasets (*Washington Post* and U.S. regions)
+1. Import necessary datasets (*Washington Post* and U.S. Regions)
 2. Clean and scrub
 3. Explore the data
 4. Visualize and analyze relevant mental illness variables
 5. Build and compare models
-6. Tune Best Performing Models
+6. Present model and recommendations
 
 
 ### Questions, Analysis, and Visualizations
@@ -62,7 +62,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 2. Which continuous variables (primarily location and age data) provide the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
    2. How do our continuous variables shine light on our categorical data?
-3. How can we best visualize the categorical and continuous data to illustrate our findings and provide recommendations/ 
+3. How can we best visualize the categorical and continuous data to illustrate our findings and provide recommendations?
 
 # EDA 
 ## **Gender**
@@ -123,13 +123,12 @@ The Mid Atlantic Division, perhaps due to its share of cases, has a steady line 
 
 ![ConfusionMatrixVan](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/vanilla%20model.png)
 
-#### After looking at our initial RFC to predict mental illness in police shooting fatalities, a few things became apparent: 
-	1. Our model is doing great predicting false cases of mental illness. 
-	2. Our model is absolutely failing to predict true cases of mental illness. 
+#### After looking at our initial RFC to predict mental illness in police shooting fatalities, one thing becomes apparent: 
+	- Our model cannot predict true cases of mental illness. 
 
 #### Where to Go?
 
-As we want to minimize type II errors (incorrect reports of mental illness presence), the model needs to primarily focus on false negatives. We are less concerned with the model predicting if someone does NOT have an associated mental health issue. With that in mind, we'll iterate through multiple models, all while focusing on increasing the recall score. 
+As we want to minimize type II errors (inaccurate reports of mental illness presence), the model needs to primarily focus on false negatives. We are less concerned with the model predicting if someone does NOT have an associated mental health issue. With that in mind, we'll iterate through multiple models, all while focusing on increasing the recall score. 
 
 #### Methods of Model Analysis
 
@@ -141,87 +140,12 @@ As we want to minimize type II errors (incorrect reports of mental illness prese
 
 ## Final
 
+![SMOTECM](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/RFCsmote%20model.png)
 
+#### Where to Go?
 **For our DTC and RFC models, we'll use a gridsearch to tune our results.**
 
-#### LogReg
 
-![ROC](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Logreg%20Roc.png)
-
-- Checking our mean AUC score gives us: 
-![AUC](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/logreg%20auc%20mean.png)
-	- This is not ideal - less than 20% better than a coin toss at a 50% AUC score. 
-
-**Checking other metrics**
-
-![CM lG](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Logreg%20CM.png)
-
-- Highly imbalanced. As we proceed in tuning, we will abandon LogReg in favor of DTC and RFC.. 
-
-![logreg scores](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Logreg%20Scores.png)
-
-- Our overall scores are decent, but the model is lacking in analysis for MI True.
-- Accuracy for our **test set** is 75%.
-- As we start to see our data is imbalanced, we will rely on our macro F1 score. Our average is just over 50% and its MI True percentage is abysmal. 
-
-#### Decision Tree Classifier
-
-![DTC CM](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/Initial%20DT%20CM.png)
-
-- We will need to tune our data more thoroughly. **Highly imbalanced.**
-
-![DTC scores](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/DT%20and%20logreg%20first.png)
-
-- Our model is failing entirely at this point. It is not predicting MI True cases in the slightest. 
-
-
-#### Random Forest Classifier
-
--Based on our preliminary analysis, we'd expect our RFC to perform in a similar fashion as our DTC and LogReg. In some ways, yes. It outperforms the DTC model, but still struggles with MI True scores. 
-
-![RFC CM](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/first%20RFC%20.png)
-
-- We're seeing a consistent lack of balance across our models. 
-
-![RFC scores](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/first%20RFC%20with%20other%20scores.png)
-
-- At this moment, our RFC is performing in a similar fashion as our LogReg model. 
-- 
-
-## Best Models (FS and SMOTE)
-
-#### Decision Tree Classifier (Best with SMOTE and FS)
-
-![bestDTC](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/best%20DTC.png)
-
-- After using feature selection prior to our gridsearch and oversampling our target class, our DTC model is doing much better. 
-
-![bestDTCsc](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/best%20DTC%20and%20methods.png)
-
-- Compared to the other methods of tuning we've employed on our DTC models, our best scores are achieved using the above methods. While our accuracy has gone down, our balance issues have been addressed; however, more can be done. We're still underperforming with our target class. 
-- **Accuracy**: 69%
-- **F1 Score**: 57%
-
-#### Random Forest Classifier (Best with SMOTE, no FS)
-
-![rocrfcsmote](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/best%20RFC%20auc.png)
-
-- As we can see, an initial examination of our RFC SMOTE model gives us our best AUC score to date. 
-- Checking the mean, we get an even higher score. 
-
-![rocrfcmean](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/rfc%20auc.png)
-
-- This is miles ahead of our previous AUC scores. While our best performing model isn't the model with the highest AUC score (more below), it's good to note our RFC is doing much better. 
-
-![rfccm](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/best%20rfc%20CM.png)
-
-- Much better! More balanced all around. Still not ideal. 
-
-![rfcscor](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/best%20RFC%20and%20methods.png)
-
-- As we can see, our RFC model with SMOTE (no FS) is giving us our best metrics. 
-- **Accuracy**: 67%
-- **F1 Score**: 60%
 
 ## Analysis and Future Steps
 
