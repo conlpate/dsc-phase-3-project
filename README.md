@@ -21,7 +21,7 @@ Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illne
 
 As calls to defund the police gained traction, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
 
-While Daniel Prude's name is not in *The Washington Post's* database, as he was not shot, his death is a tragic illustration of fatal force used against those suffering from a mental illness.
+While Daniel Prude's name is not in *The Washington Post's* database, as he was not shot, his death is a tragic illustration of fatal force used against those in most need of an alternative, crisis-oriented response. 
 
 # Table of contents
 
