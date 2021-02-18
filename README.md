@@ -8,13 +8,11 @@
 
 ## Introduction
 
-"*Defund the Police*" is not a new rallying cry. Per [The Guardian, June 2020](https://www.theguardian.com/us-news/2020/jun/05/defunding-the-police-us-what-does-it-mean), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for five years or more, gaining ground after the fatal shoooting of Michael Brown in 2014.
+"*Defund the Police*" is not a new rallying cry. Per [The Guardian, June 2020](https://www.theguardian.com/us-news/2020/jun/05/defunding-the-police-us-what-does-it-mean), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for five years or more, increasing after the fatal shoooting of Michael Brown in 2014.
 
 As calls to defund the police gained traction, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
 
-Since the murder of George Floyd in the summer of 2020, calls to defund the police have increased in both frequency and volume. As quoted above, rarely does the movement advocate for a dismantling of police departments; rather, it a movement demanding a restructuring and/or a reallocation of law enforcement funds toward more relevant services.
-
-Perhaps one of the sharpest illustrations of a need to reallocate funding toward more appropriate services came with the death of Daniel Prude.
+Perhaps one of the clearest examples of a need to defund the police came with the death of Daniel Prude in October, 2020.
 
 ![daniel prude](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/daniel%20prude%20treated%20like.png)
 
