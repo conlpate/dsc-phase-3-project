@@ -123,12 +123,12 @@ The Mid Atlantic Division, perhaps due to its share of cases, has a steady line 
 
 ![ConfusionMatrixVan](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/vanilla%20model.png)
 
-#### After looking at our initial RFC to predict mental illness in police shooting fatalities, one thing becomes apparent: 
-	- Our model cannot predict true cases of mental illness. 
+### After looking at our initial RFC to predict mental illness in police shooting fatalities, one thing becomes apparent: 
+	- Our vanilla model, highly imbalanced, cannot predict true cases of mental illness. 
 
 #### Where to Go?
 
-As we want to minimize type II errors (inaccurate reports of mental illness presence), the model needs to primarily focus on false negatives. We are less concerned with the model predicting if someone does NOT have an associated mental health issue. With that in mind, we'll iterate through multiple models, all while focusing on increasing the recall score. 
+As we want to minimize type II errors (inaccurate reports of mental illness presence), the model needs to primarily focus on false negatives. With that in mind, we'll iterate through multiple models, all while focusing on increasing recall. 
 
 #### Methods of Model Analysis
 
@@ -142,8 +142,15 @@ As we want to minimize type II errors (inaccurate reports of mental illness pres
 
 ![SMOTECM](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/RFCsmote%20model.png)
 
-#### Where to Go?
-**For our DTC and RFC models, we'll use a gridsearch to tune our results.**
+### Insights 
+
+Our final model has a few added and altered parameters compared to the vanilla model, but the primary increase in performance can be attributed to oversampling the minority class via SMOTE. 
+
+In the attached notebook, you'll see various random forest classifiers fit with feature importance, hyperparameter tuning and a combination of the two with SMOTE. However, the best performing model with the highest recall score was also, as mentioned above, the simplest. 
+
+![SMOTECM](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/CM:AUC.png)
+
+
 
 
 
