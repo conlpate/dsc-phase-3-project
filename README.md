@@ -17,7 +17,7 @@ Perhaps one of the clearest examples in recent years of a need to reassess polic
 
 [On Daniel Prude, NYTimes, Oct 2020](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)
 
-Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illness, died of asphyxia after being hooded and physically restrained by local police officers. At the time of his arrest and physical restraint, Daniel was suffering from a mental health episode, triggered by the ingestion of PCP. Daniel's death was ruled a homicide by the medical examiner conducting his autopsy. 
+Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illness, died of asphyxia after being hooded and physically incapacitated by local police officers. At the time of his arrest and subsequent restraint, Daniel was suffering from a mental health episode, triggered by the ingestion of PCP. Daniel's death was ruled a homicide by the medical examiner conducting his autopsy. 
 
 As calls to defund the police gained traction, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
 
