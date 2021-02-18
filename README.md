@@ -8,9 +8,9 @@
 
 ## Introduction
 
-"*Defund the Police*" is not a new rallying cry. Per [The Guardian, June 2020](https://www.theguardian.com/us-news/2020/jun/05/defunding-the-police-us-what-does-it-mean), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for **five years or more,** perhaps taking root after the shoooting of Michael Brown in 2019.
+"*Defund the Police*" is not a new rallying cry. Per [The Guardian, June 2020](https://www.theguardian.com/us-news/2020/jun/05/defunding-the-police-us-what-does-it-mean), "For years, community groups have advocated for defunding law enforcement - taking money away from police and prisons - and reinvesting those funds in services." They estimate the movement has existed for **five years or more,** perhaps taking root after the shoooting of Michael Brown in 2014.
 
-However, since the murder of George Floyd in the summer of 2020, calls to defund the police have increased in both frequency and volume. As quoted above, rarely does the movement advocate for a dismantling of police departments; rather, it a movement demanding a restructuring, a reallocation of law enforcement funds toward more beneficial services.
+However, since the murder of George Floyd in the summer of 2020, calls to defund the police have increased in both frequency and volume. As quoted above, rarely does the movement advocate for a dismantling of police departments; rather, it a movement demanding a restructuring and/or a reallocation of law enforcement funds toward more relevant services.
 
 While calls to defund the police gained steam, *The Washington Post* began tracking fatal police shootings in the U.S starting in 2015 ([Washington Post Database Overview](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)).
 
@@ -21,7 +21,7 @@ Perhaps one of the sharpest illustrations of a need to reallocate funding toward
 
 [On Daniel Prude, NYTimes, Oct 2020](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/?itid=lk_inline_manual_3)
 
-Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illness, was restrained and hooded on the ground while suffering a mental health episode. Daniel Prude died of asphyxia while restrained on the ground. 
+Daniel Prude, a 41 year old man in Rochester, NY, with a history of mental illness, died of asphyxia while suffering a mental health episode. He passed after being restrained and hooded by local law enforcement. 
 
 While Daniel Prude's name is not in *The Washington Post's* database, as he was not shot, his death is a tragic illustration of fatal force used against those suffering from a mental illness.
 
@@ -58,7 +58,7 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
 
 1. What categorical data provides the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
-   2. What can we learn from interactions?
+   	A. What can we learn from these interactions?
 2. Which continuous variables (primarily location and age data) provide the best insight into true/false signs of mental illness?
    1. How do these interact with each other?
    2. How do our continuous variables shine light on our categorical data?
