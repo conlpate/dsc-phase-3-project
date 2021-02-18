@@ -1,5 +1,5 @@
 
-# Is There a Problem with Mental Health in US Police Response? 
+# The Problem with Mental Health in US Police Response
 
 ![Wapo 2020](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/wapo%20header.png)
 
@@ -32,8 +32,9 @@ While Daniel Prude's name is not in *The Washington Post's* database, as he was 
     - [Gender](#gender)
     - [Race](#race)
     - [Location](#location)
-- [Model Analysis](#modeling)	
-    - [Location](#location)
+- [Model Analysis, RFC](#modeling)	
+    - [Vanilla](#vanilla)
+    - [Final](#final)
 - [Recommendations]
 
 # Objectives
@@ -117,23 +118,29 @@ The Mid Atlantic Division, perhaps due to its share of cases, has a steady line 
 
 # Modeling
 
-![Model Overview](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/model%20overview%20title.png)
+## Vanilla
+
+
+![ConfusionMatrixVan](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/vanilla%20model.png)
+
+#### After looking at our initial RFC to predict mental illness in police shooting fatalities, a few things became apparent: 
+	1. Our model is doing great predicting false cases of mental illness. 
+	2. Our model is absolutely failing to predict true cases of mental illness. 
 
 #### Where to Go?
 
-Before diving into model building, a cursory overview of scores will give some insight into how our data is performing.
-
-Due to the distribution of scores for LogReg, our RFC (random forest classifier), and our DTC (decision tree classifier), we'll start there. 
+As we want to minimize type II errors (incorrect reports of mental illness presence), the model needs to primarily focus on false negatives. We are less concerned with the model predicting if someone does NOT have an associated mental health issue. With that in mind, we'll iterate through multiple models, all while focusing on increasing the recall score. 
 
 #### Methods of Model Analysis
 
-**For each model, we'll use the following steps to build and analyze performance:**
+**For each model, we'll use the following metrics to analyze performance:**
 
-1. Assign Test/Train Data to Model
-2. Check Test/Train Performance
-3. Confusion Matrix
-4. ROC/AUC scores 
-5. Investigate scores 
+1. Confusion Matrix
+2. Mean AUC
+3. Train/Test Sccore
+
+## Final
+
 
 **For our DTC and RFC models, we'll use a gridsearch to tune our results.**
 
@@ -179,6 +186,7 @@ Due to the distribution of scores for LogReg, our RFC (random forest classifier)
 ![RFC scores](https://github.com/conlpate/dsc-mod-3-project-v2-1-onl01-dtsc-pt-052620/blob/master/images3/first%20RFC%20with%20other%20scores.png)
 
 - At this moment, our RFC is performing in a similar fashion as our LogReg model. 
+- 
 
 ## Best Models (FS and SMOTE)
 
