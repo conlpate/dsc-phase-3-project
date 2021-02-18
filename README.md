@@ -146,7 +146,7 @@ As we want to minimize type II errors (inaccurate classification of mental illne
 
 Our final model has a few added and altered parameters compared to the vanilla model, but the primary increase in performance can be attributed to oversampling the minority class via SMOTE. 
 
-In the attached notebook, you'll see various random forest classifiers fit with feature importance, hyperparameter tuning and a combination of the two with SMOTE. However, the best performing model with the highest recall score was also, as mentioned above, the simplest. 
+In the attached notebook, you'll see various random forest classifiers fit with feature importance, hyperparameter tuning and a combination of the two with SMOTE. However, the best performing model with the highest recall score was, as mentioned above, the simplest. 
 
 ![SMOTECM](https://github.com/conlpate/dsc-phase-3-project/blob/main/images/CM:AUC.png)
 
